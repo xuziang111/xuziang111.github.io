@@ -346,24 +346,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/11/17/npx/">
+        <a class="abstract-title" href="/2018/12/17/预览图片/">
             
-                <span>npx</span>
+                <span>预览图片</span>
         </a>
         <div class="abstract-content">
-            npx 会自动查找当前依赖包中的可执行文件，如果找不到，就会去 PATH 里找。如果依然找不到，就会帮你安装。例如1npx webpack
+            在vue中使用FileReader()预览失败，绑定的src没有改变，预测可能是转成base64过长，处理有问题，于是改成使用URL.createObjectURL()来处理。URL.createObjectURL()处理后生成了一个临时的链接，直接赋值给src就行。兼容性兼容性
 
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/17</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="npm">npm</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
     
 </div>
             
@@ -376,23 +378,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/11/17/hello-world/">
+        <a class="abstract-title" href="/2018/12/17/滚动条的样式/">
             
-                <span>Hello World</span>
+                <span>滚动条的样式</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
+            有时候在某些布局上面，内容太多，而范围很小，为了不影响布局，这是我们可能会设置滚动条，如overflow:scroll;
+但是浏览器的默认滚动条又太难看，而且与整体页面风格很不搭，这时我们可以通过css3来实现。1234567891011121314151617181920212223/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  ::-webkit-scrollbar  &#123;      width: 4px;      height: 4px;      background-color: #F5F5F5;  &#125;    /*定义滚动条轨道 内阴影+圆角*...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/17</span>
             </div>
             <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="css">css</a>
+    
+</div>
             
         </div>
     </article>
@@ -422,6 +427,103 @@ More...
             <div class="abstract-tags">
     
         <a class="post-tag" href="javascript:void(0);" data-tags="正则表达式">正则表达式</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/10/31/vue中beforeCreate/">
+            
+                <span>vue中beforeCreate</span>
+        </a>
+        <div class="abstract-content">
+            beforeCreate最好不要改动data里的数据，否则可能会出现无法监听的情况，模板中需要使用data进行渲染时，先给data默认的初始值，created之后再进行更改（如ajax）改成需要的值。
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/31</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/10/30/vue中给标签属性绑定值/">
+            
+                <span>vue中给标签属性绑定值</span>
+        </a>
+        <div class="abstract-content">
+            给属性绑定值时并非1&lt;img src=&quot;&#123;&#123;e.head&#125;&#125;&quot;&gt;
+而是1&lt;img :src=&quot;bList.head&quot;&gt;
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/09/30/cropper-js的一个坑/">
+            
+                <span>cropper.js的预览功能（preview）如果在渲染时，元素为display:none,就会无法预览。</span>
+        </a>
+        <div class="abstract-content">
+            cropper.js的预览功能（preview）如果在渲染时，元素为display:none,就会无法预览。改成与按钮绑定，点击时display:none变为display:block,这时进行渲染就可以了。
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="cropperjs">cropperjs</a>
     
 </div>
             

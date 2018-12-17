@@ -346,12 +346,13 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/12/17/typescript类型/">
+        <a class="abstract-title" href="/2018/12/17/预览图片/">
             
-                <span>typescript类型</span>
+                <span>预览图片</span>
         </a>
         <div class="abstract-content">
-            
+            在vue中使用FileReader()预览失败，绑定的src没有改变，预测可能是转成base64过长，处理有问题，于是改成使用URL.createObjectURL()来处理。URL.createObjectURL()处理后生成了一个临时的链接，直接赋值给src就行。兼容性兼容性
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -359,6 +360,75 @@
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/17</span>
             </div>
             <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/12/17/滚动条的样式/">
+            
+                <span>滚动条的样式</span>
+        </a>
+        <div class="abstract-content">
+            有时候在某些布局上面，内容太多，而范围很小，为了不影响布局，这是我们可能会设置滚动条，如overflow:scroll;
+但是浏览器的默认滚动条又太难看，而且与整体页面风格很不搭，这时我们可以通过css3来实现。1234567891011121314151617181920212223/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  ::-webkit-scrollbar  &#123;      width: 4px;      height: 4px;      background-color: #F5F5F5;  &#125;    /*定义滚动条轨道 内阴影+圆角*...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="css">css</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2018/12/17/typescript类型/">
+            
+                <span>typescript类型</span>
+        </a>
+        <div class="abstract-content">
+            布尔、字符串、数字、数组、对象在原生数组的基础上
+##元组 Tuple元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。 比如，你可以定义一对值分别为string和number类型的元组。123456// Declare a tuple typelet x: [string, number];// Initialize itx = [&apos;hello&apos;, 10]; // OK// Initialize it incorrectlyx = [10, &apos;hello&apos;]; // Error`&lt;/pre&gt;
+当访问一个已知索引的元素...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/17</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="typescript">typescript</a>
+    
+</div>
             
         </div>
     </article>
@@ -496,9 +566,86 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 10
         </div>
         <!-- search  -->
         
@@ -514,6 +661,16 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">12/17</span><a class="archive-post-title" href="/2018/12/17/预览图片/">预览图片</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/17</span><a class="archive-post-title" href="/2018/12/17/滚动条的样式/">滚动条的样式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">12/17</span><a class="archive-post-title" href="/2018/12/17/typescript类型/">typescript类型</a>
         </li>
     
@@ -524,17 +681,32 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href="/2018/11/17/My-Gallery/">My Gallery</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/17</span><a class="archive-post-title" href="/2018/11/17/hello-world/">Hello World</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/17</span><a class="archive-post-title" href="/2018/11/17/“test/">“test</a>
+            <span class="archive-post-date">11/07</span><a class="archive-post-title" href="/2018/11/07/正则验证中文名-包括·/">正则验证中文名 包括·</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/31</span><a class="archive-post-title" href="/2018/10/31/vue中beforeCreate/">vue中beforeCreate</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/30</span><a class="archive-post-title" href="/2018/10/30/vue中给标签属性绑定值/">vue中给标签属性绑定值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/18</span><a class="archive-post-title" href="/2018/10/18/IE11中相同的get请求会返回相同的值/">IE11中相同的get请求会返回相同的值</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/30</span><a class="archive-post-title" href="/2018/09/30/cropper-js的一个坑/">cropper.js的预览功能（preview）如果在渲染时，元素为display:none,就会无法预览。</a>
         </li>
     
     </ul></div>
@@ -542,7 +714,21 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
+    
+        <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
+    
+        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
+    
+        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
+    
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
+    
+        <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
+    
+        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+    
+        <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -576,6 +762,10 @@ jsonContent:
 </div>
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="一些坑"><span class="iconfont-archer">&#xe60a;</span>一些坑</span>
+    
+        <span class="sidebar-category-name" data-categories="搭社团网页遇到的问题"><span class="iconfont-archer">&#xe60a;</span>搭社团网页遇到的问题</span>
     
         <span class="sidebar-category-name" data-categories="前端"><span class="iconfont-archer">&#xe60a;</span>前端</span>
     

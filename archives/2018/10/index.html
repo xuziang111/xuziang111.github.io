@@ -346,24 +346,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/11/17/npx/">
+        <a class="abstract-title" href="/2018/10/31/vue中beforeCreate/">
             
-                <span>npx</span>
+                <span>vue中beforeCreate</span>
         </a>
         <div class="abstract-content">
-            npx 会自动查找当前依赖包中的可执行文件，如果找不到，就会去 PATH 里找。如果依然找不到，就会帮你安装。例如1npx webpack
+            beforeCreate最好不要改动data里的数据，否则可能会出现无法监听的情况，模板中需要使用data进行渲染时，先给data默认的初始值，created之后再进行更改（如ajax）改成需要的值。
 
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/31</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="npm">npm</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
     
 </div>
             
@@ -376,23 +378,29 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/11/17/hello-world/">
+        <a class="abstract-title" href="/2018/10/30/vue中给标签属性绑定值/">
             
-                <span>Hello World</span>
+                <span>vue中给标签属性绑定值</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
+            给属性绑定值时并非1&lt;img src=&quot;&#123;&#123;e.head&#125;&#125;&quot;&gt;
+而是1&lt;img :src=&quot;bList.head&quot;&gt;
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/17</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/30</span>
             </div>
             <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
             
         </div>
     </article>
@@ -403,25 +411,26 @@ More...
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2018/11/07/正则验证中文名-包括·/">
+        <a class="abstract-title" href="/2018/10/18/IE11中相同的get请求会返回相同的值/">
             
-                <span>正则验证中文名 包括·</span>
+                <span>IE11中相同的get请求会返回相同的值</span>
         </a>
         <div class="abstract-content">
-            中文名少数名族1/^[\u4E00-\u9FA5\uf900-\ufa2d·s]&#123;2,20&#125;$/
-身份证号简单验证1/(^\d&#123;15&#125;$)|(^\d&#123;18&#125;$)|(^\d&#123;17&#125;(\d|X|x)$)/
+            IE11中相同的get请求多次发送时，会直接读取本地的缓存，但是F12打开调试又会重新向服务器发送请求。简单的解决方法就是在请求的url后面加一串随机数，或者改成post请求。
 
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/07</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/18</span>
             </div>
             <!-- tags  -->
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="正则表达式">正则表达式</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="IE">IE</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
     
 </div>
             
