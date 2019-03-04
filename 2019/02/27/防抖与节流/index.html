@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>xuziang&#39;s Blog</title>
+    <title>防抖与节流 · xuziang&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">xuziang&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">防抖与节流</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">xuziang's Blog.</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            防抖与节流
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">797</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/02/27</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,174 +399,59 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/12/slot-in-vue/">
-            
-                <span>vue中的slot（插槽）</span>
-        </a>
-        <div class="abstract-content">
-            #未命名插槽slot未命名时，每个标签内都会生成父组件中提供的内容。父组件app.vue12345678910111213141516171819202122232425&lt;template&gt; &lt;div id=&apos;app&apos;&gt;        &lt;slottest&gt;            &lt;h1&gt;Here might be a page title&lt;/h1&gt;                              &lt;p&gt;A paragraph for the main content.&lt;/p&gt;...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/12/Vue-router基础/">
-            
-                <span>Vue-router基础</span>
-        </a>
-        <div class="abstract-content">
-            #Vue Router是什么Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>防抖：如果你持续触发事件，但是我一定在事件触发 n 秒后才执行，如果你在一个事件触发的 n 秒内又触发了这个事件，那我就以新的事件的时间为准，n 秒后才执行。</p>
+<h1 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h1><p>防抖：如果你持续触发事件，但是我一定在事件触发 n 秒后才执行，如果你在一个事件触发的 n 秒内又触发了这个事件，那我就以新的事件的时间为准，n 秒后才执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function debounce(fn, delay) &#123;</span><br><span class="line">    //定义一个变量，记录触发情况</span><br><span class="line">    var timeout;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        //时间被持续触发时，清除之前的timeout</span><br><span class="line">        clearTimeout(timeout)</span><br><span class="line">        //设定新的timeout</span><br><span class="line">        timeout = setTimeout(fn, delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>滚动scroll时，设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function fn()&#123;</span><br><span class="line">    let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;</span><br><span class="line">    console.log(scrollTop)</span><br><span class="line">&#125;</span><br><span class="line">window.scroll=debounce(fn,1000)</span><br></pre></td></tr></table></figure></p>
+<p>持续滚动只会在最后一次1000ms之后输出scrollTop。</p>
+<h2 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h2><p>使用debounce时，this指向为window或undefined，需要在函数内绑定正确的this。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function debounce(fn, delay) &#123;</span><br><span class="line">    //定义一个变量，记录触发情况</span><br><span class="line">    var timeout;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        //绑定this值</span><br><span class="line">        let _temp = this</span><br><span class="line">        //时间被持续触发时，清除之前的timeout</span><br><span class="line">        clearTimeout(timeout)</span><br><span class="line">        //设定新的timeout</span><br><span class="line">        timeout = setTimeout(fn.apply(temp), delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="event的指向"><a href="#event的指向" class="headerlink" title="event的指向"></a>event的指向</h2><p>javascript再时间函数中都会有事件对象event，之前的debounce无法使用event，因此还需要进行修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function debounce(fn, delay) &#123;</span><br><span class="line">    //定义一个变量，记录触发情况</span><br><span class="line">    var timeout;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        //绑定this值</span><br><span class="line">        let _temp = this</span><br><span class="line">        //绑定event对象</span><br><span class="line">        let arg = arguments</span><br><span class="line">        //时间被持续触发时，清除之前的timeout</span><br><span class="line">        clearTimeout(timeout)</span><br><span class="line">        //设定新的timeout</span><br><span class="line">        timeout = setTimeout(fn.apply(temp,arg), delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h1><p>节流：如果你持续触发事件，每隔一段时间，只执行一次事件。</p>
+<h2 id="使用时间戳（date）"><a href="#使用时间戳（date）" class="headerlink" title="使用时间戳（date）"></a>使用时间戳（date）</h2><p>当触发事件的时候，我们取出当前的时间戳，然后减去之前的时间戳(最一开始值设为 0 )，如果大于设置的时间周期，就执行函数，然后更新时间戳为当前的时间戳，如果小于，就不执行。</p>
+<p>根据之前防抖的代码，如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//fn要执行的函数，delay等待的时间</span><br><span class="line">function throttle(fn, delay) &#123;</span><br><span class="line">    let context, args;</span><br><span class="line">    //第一个时间戳为0</span><br><span class="line">    let previous = 0;</span><br><span class="line"></span><br><span class="line">    return function() &#123;</span><br><span class="line">        //获取当前时间</span><br><span class="line">        var now = +new Date();</span><br><span class="line">        //绑定this</span><br><span class="line">        _temp = this;</span><br><span class="line">        //绑定event</span><br><span class="line">        args = arguments;</span><br><span class="line">        //判断是否经过delay,未经过则忽略此次执行；已经过则执行fn，并重新设定previous。</span><br><span class="line">        if (now - previous &gt; delay) &#123;</span><br><span class="line">            func.apply(_temp, args);</span><br><span class="line">            previous = now;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>第一次由于previous为0所以会立即执行fn，之后如果持续出发，则每经过delay执行一次。</p>
+<h2 id="使用定时器"><a href="#使用定时器" class="headerlink" title="使用定时器"></a>使用定时器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//fn要执行的函数，delay等待的时间</span><br><span class="line">function throttle(fn, delay) &#123;</span><br><span class="line">    let context, args;</span><br><span class="line">    let timeout;</span><br><span class="line">    return function() &#123;</span><br><span class="line">        //绑定this</span><br><span class="line">        _temp = this;</span><br><span class="line">        //绑定event</span><br><span class="line">        args = arguments;</span><br><span class="line">        //timeout不存在时执行，存在时则忽略</span><br><span class="line">        if(!timeout)&#123;</span><br><span class="line">            timeout = setTimeout(function()&#123;</span><br><span class="line">                fn.apply(temp)</span><br><span class="line">                timeout = null</span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两种节流有一定区别：<br>第一种第一次会立即执行，第二种则是在delay后执行。<br>第一种在最后一次触发后不会再次执行，第二种在最后一次出发后会再执行一次。</p>
 
-嵌套的路由/视图表
-模块化的、基于组件的路由配置
-路由参数、查询、通配符
-基于 Vue.js 过渡系统的视图过渡效果
-细粒度的导航控制
-带有自动激活的 CSS class 的链接
-HTML5 历史模式或 hash 模式，在 IE9 中自动降级
-自定义的滚动条行为#一个使用Vue Router创建单页面应用的简单例子Html12345678910111213141516&lt;script src=&quot;https:...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/06/预览图片/">
-            
-                <span>预览图片</span>
-        </a>
-        <div class="abstract-content">
-            在vue中使用FileReader()预览失败，绑定的src没有改变，预测可能是转成base64过长，处理有问题，于是改成使用URL.createObjectURL()来处理。URL.createObjectURL()处理后生成了一个临时的链接，直接赋值给src就行。兼容性兼容性
-
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://lolimy.club">xza</a>
+            </p><p>原文链接：<a href="https://lolimy.club/2019/02/27/防抖与节流/">https://lolimy.club/2019/02/27/防抖与节流/</a>
+            </p><p>发表日期：<a href="https://lolimy.club/2019/02/27/防抖与节流/">February 27th 2019, 5:24:36 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/10/31/vue中beforeCreate/">
-            
-                <span>vue中beforeCreate</span>
-        </a>
-        <div class="abstract-content">
-            beforeCreate最好不要改动data里的数据，否则可能会出现无法监听的情况，模板中需要使用data进行渲染时，先给data默认的初始值，created之后再进行更改（如ajax）改成需要的值。
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/10/30/vue中给标签属性绑定值/">
-            
-                <span>vue中给标签属性绑定值</span>
-        </a>
-        <div class="abstract-content">
-            给属性绑定值时并非1&lt;img src=&quot;&#123;&#123;e.head&#125;&#125;&quot;&gt;
-而是1&lt;img :src=&quot;bList.head&quot;&gt;
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/02/26/给jqueryAjax传参/" title="给$.ajax传参">
+                    <div class="prevTitle">给$.ajax传参</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -583,6 +529,24 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#防抖"><span class="toc-number">1.</span> <span class="toc-text">防抖</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#this的指向"><span class="toc-number">1.1.</span> <span class="toc-text">this的指向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#event的指向"><span class="toc-number">1.2.</span> <span class="toc-text">event的指向</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#节流"><span class="toc-number">2.</span> <span class="toc-text">节流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用时间戳（date）"><span class="toc-number">2.1.</span> <span class="toc-text">使用时间戳（date）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用定时器"><span class="toc-number">2.2.</span> <span class="toc-text">使用定时器</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1075,6 +1039,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d_models/aoba/aoba.model.json"},"log":false});</script></body>
 </html>
