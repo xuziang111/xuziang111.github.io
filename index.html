@@ -357,6 +357,36 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/14/生成一个元素所有节点/">
+            
+                <span>生成一个元素所有节点</span>
+        </a>
+        <div class="abstract-content">
+            通过createDocumentFragment创建一个空的dom节点。12345678910function nodeToFragme(node)&#123;        var flag = document.createDocumentFragment();        var child;        while(child = node.firstChild )&#123;            flag.appendChild(child);            &#125;        return flag ;    &#125;
+根据https://devel...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/12/点击复制功能的实现/">
             
                 <span>点击复制功能的实现</span>
@@ -615,37 +645,6 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
             <div class="abstract-tags">
     
         <a class="post-tag" href="javascript:void(0);" data-tags="typescript">typescript</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/11/26/拖拽效果/">
-            
-                <span>拖拽效果</span>
-        </a>
-        <div class="abstract-content">
-            在做前端播放器页面的时候，需要做拖动进度条的功能，如下图所示。但是如果mousemove事件绑定在所拖拽的元素本身的时候，拖拽过快会让鼠标移出元素，从而导致拖拽失效。因此需将mousemove、mouseup事件绑在body或其他在鼠标移动范围内的元素上，而mousedown需要绑定在你要拖拽的元素上，从而触发将mousemove、mouseup事件绑定在body等元素上的函数。
-在mousemove事件中，通过获取e.pageX、e.pageY来获取鼠标的位置，从而来改动所拖动元素的位置。
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
     
 </div>
             
@@ -1100,9 +1099,26 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 22
+        Total : 23
         </div>
         <!-- search  -->
         
@@ -1115,6 +1131,11 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/14</span><a class="archive-post-title" href="/2019/03/14/生成一个元素所有节点/">生成一个元素所有节点</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1248,15 +1269,15 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
         <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
     
-        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
+        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
     
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
         <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
     
-        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
-        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
     
