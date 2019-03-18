@@ -347,13 +347,42 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/vue的实现-一/">
+            
+                <span>vue的实现(一)</span>
+        </a>
+        <div class="abstract-content">
+            首先来看一些会遇到的东西
+DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对象。它被作为一个轻量版的 Document 使用，用于存储已排好版的或尚未打理好格式的XML片段。最大的区别是因为 DocumentFragment 不是真实DOM树的一部分，它的变化不会触发 DOM 树的（重新渲染)，且不会导致性能等问题。使用DocumentFragment减少页面重绘次数，提高页面性能。12345&lt;ul id=&quot;fragment_test&quot;&gt;  &lt;li&gt;test&lt;/li&gt;  &lt;li&gt;test&lt...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/18</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/14/生成一个元素所有节点/">
             
                 <span>生成一个元素所有节点</span>
         </a>
         <div class="abstract-content">
-            通过createDocumentFragment创建一个空的dom节点。12345678910function nodeToFragme(node)&#123;        var flag = document.createDocumentFragment();        var child;        while(child = node.firstChild )&#123;            flag.appendChild(child);            &#125;        return flag ;    &#125;
-根据https://devel...
+            通过createDocumentFragment创建一个空的dom节点。12345678910111213// 获取节点const node = document.getElementById(&apos;test&apos;)//拷贝到DocumentFragment    function nodeToFragme(node)&#123;            var flag = document.createDocumentFragment();            var child;            while(child = node.firstChild )&#1...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -962,9 +991,36 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -977,6 +1033,11 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/vue的实现-一/">vue的实现(一)</a>
+        </li>
     
     
         <li class="archive-post-item">

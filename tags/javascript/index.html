@@ -352,8 +352,7 @@
                 <span>生成一个元素所有节点</span>
         </a>
         <div class="abstract-content">
-            通过createDocumentFragment创建一个空的dom节点。12345678910function nodeToFragme(node)&#123;        var flag = document.createDocumentFragment();        var child;        while(child = node.firstChild )&#123;            flag.appendChild(child);            &#125;        return flag ;    &#125;
-根据https://devel...
+            通过createDocumentFragment创建一个空的dom节点。12345678910111213// 获取节点const node = document.getElementById(&apos;test&apos;)//拷贝到DocumentFragment    function nodeToFragme(node)&#123;            var flag = document.createDocumentFragment();            var child;            while(child = node.firstChild )&#1...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -851,9 +850,36 @@ jquery中不同，value与index相反。123$.each([], function(index, value, arr
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -866,6 +892,11 @@ jquery中不同，value与index相反。123$.each([], function(index, value, arr
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/vue的实现-一/">vue的实现(一)</a>
+        </li>
     
     
         <li class="archive-post-item">

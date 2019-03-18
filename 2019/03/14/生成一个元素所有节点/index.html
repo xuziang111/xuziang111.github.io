@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">128</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">143</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,8 +402,8 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>通过createDocumentFragment创建一个空的dom节点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function nodeToFragme(node)&#123;</span><br><span class="line">        var flag = document.createDocumentFragment();</span><br><span class="line">        var child;</span><br><span class="line"></span><br><span class="line">        while(child = node.firstChild )&#123;</span><br><span class="line">            flag.appendChild(child);    </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return flag ;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild</a><br>如果被插入的节点已经存在于当前文档的文档树中,则那个节点会首先从原先的位置移除,然后再插入到新的位置。所以没吃运行到<code>while(child = node.firstChild </code>是child都会是新的子节点一直到node没有子节点时结束插入。</p>
+        <p>通过createDocumentFragment创建一个空的dom节点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 获取节点</span><br><span class="line">const node = document.getElementById(&apos;test&apos;)</span><br><span class="line">//拷贝到DocumentFragment</span><br><span class="line">    function nodeToFragme(node)&#123;</span><br><span class="line">            var flag = document.createDocumentFragment();</span><br><span class="line">            var child;</span><br><span class="line"></span><br><span class="line">            while(child = node.firstChild )&#123;</span><br><span class="line">                flag.appendChild(child);    </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return flag ;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild</a><br>如果被插入的节点已经存在于当前文档的文档树中,则那个节点会首先从原先的位置移除,然后再插入到新的位置。所以没次运行到<code>while(child = node.firstChild)</code>child都会是新的子节点一直到node没有子节点时结束插入。</p>
 
     </article>
     <!-- license  -->
@@ -418,6 +418,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/03/18/vue的实现-一/" title="vue的实现(一)">
+                    <div class="nextTitle">vue的实现(一)</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -856,9 +861,36 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 24
         </div>
         <!-- search  -->
         
@@ -871,6 +903,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/vue的实现-一/">vue的实现(一)</a>
+        </li>
     
     
         <li class="archive-post-item">
