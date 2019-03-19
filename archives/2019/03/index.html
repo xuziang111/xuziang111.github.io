@@ -347,9 +347,67 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/vue的实现-一/">
+        <a class="abstract-title" href="/2019/03/19/vue的实现（三）/">
             
-                <span>vue的实现(一)</span>
+                <span>vue的实现（三）</span>
+        </a>
+        <div class="abstract-content">
+            上部分讲到如何用Object.defineProperty()实现数据代理，这一部分讲如何对dom进行解析。
+模板解析12345678910111213141516&lt;div id=&quot;test&quot;&gt;  &lt;p&gt;&#123;&#123;name&#125;&#125;&lt;/p&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;js/mvvm/compile.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/vue的实现（二）/">
+            
+                <span>vue的实现（二）</span>
+        </a>
+        <div class="abstract-content">
+            vue是通过数据劫持的方式来做数据绑定的，其中最核心的方法便是通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的。整理了一下，要实现mvvm的双向绑定，就必须要实现以下几点：
+
+实现一个数据监听器Observer，能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者。
+实现一个指令解析器Compile，对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数。
+实现一个Watcher，作为连接Observer和Compile的桥梁，能够订阅并收到每个属性变动的通知，执行指令绑定的相应回调函数，从而更新视图。
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/18</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/18/vue的实现（一）/">
+            
+                <span>vue的实现（一）</span>
         </a>
         <div class="abstract-content">
             首先来看一些会遇到的东西
@@ -437,6 +495,19 @@ DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对�
             
         </div>
         <footer class="footer footer-unloaded">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+
     <!-- social  -->
     
     <div class="social">
@@ -838,9 +909,37 @@ DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对�
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 24
+        Total : 26
         </div>
         <!-- search  -->
         
@@ -856,7 +955,17 @@ DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/vue的实现-一/">vue的实现(一)</a>
+            <span class="archive-post-date">03/19</span><a class="archive-post-title" href="/2019/03/19/vue的实现（三）/">vue的实现（三）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/vue的实现（二）/">vue的实现（二）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/18</span><a class="archive-post-title" href="/2019/03/18/vue的实现（一）/">vue的实现（一）</a>
         </li>
     
     
@@ -990,23 +1099,23 @@ DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对�
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
     
-        <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
-    
-        <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
-    
         <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
     
         <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
-        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+        <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
     
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+        <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
+    
+        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
     
         <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
     
-        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
+    
+        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
         <span class="sidebar-tag-name" data-tags="懒加载"><span class="iconfont-archer">&#xe606;</span>懒加载</span>
     
