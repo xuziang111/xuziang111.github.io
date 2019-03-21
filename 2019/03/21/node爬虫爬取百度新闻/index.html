@@ -23,7 +23,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>xuziang&#39;s Blog</title>
+    <title>node爬虫爬取百度新闻 · xuziang&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,12 +204,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">xuziang&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">node爬虫爬取百度新闻</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">xuziang's Blog.</a>
 </header>
@@ -221,24 +232,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            node爬虫爬取百度新闻
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="node">node</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="爬虫">爬虫</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.1k</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/03/21</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -353,318 +416,89 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/21/node爬虫爬取百度新闻/">
-            
-                <span>node爬虫爬取百度新闻</span>
-        </a>
-        <div class="abstract-content">
-            材料爬取网站 http://news.baidu.com/
-依赖superagent是node里一个非常方便的、轻量的、渐进式的第三方客户端请求代理模块，用他来请求目标页面）cheerio（cheerio相当于node版的jQuery，用过jQuery的同学会非常容易上手。它主要是用来获取抓取到的页面元素和其中的数据信息）
-启动服务器新建一个baidunews文件夹，目录下新建index.js文件。进行初始化。1npm init
-安装依赖12npm install superagentnpm install cheerio
-让服务器跑起来。
-12345678910111213var ht...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="node">node</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="爬虫">爬虫</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/19/vue的实现（三）/">
-            
-                <span>vue的实现（三）</span>
-        </a>
-        <div class="abstract-content">
-            上部分讲到如何用Object.defineProperty()实现数据代理，这一部分讲如何对dom进行解析。
-模板解析12345678910111213141516&lt;div id=&quot;test&quot;&gt;  &lt;p&gt;&#123;&#123;name&#125;&#125;&lt;/p&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;js/mvvm/compile.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/vue的实现（二）/">
-            
-                <span>vue的实现（二）</span>
-        </a>
-        <div class="abstract-content">
-            vue是通过数据劫持的方式来做数据绑定的，其中最核心的方法便是通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的。整理了一下，要实现mvvm的双向绑定，就必须要实现以下几点：
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h1><h2 id="爬取网站"><a href="#爬取网站" class="headerlink" title="爬取网站"></a>爬取网站</h2><p> <a href="http://news.baidu.com/" target="_blank" rel="noopener">http://news.baidu.com/</a></p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>superagent是node里一个非常方便的、轻量的、渐进式的第三方客户端请求代理模块，用他来请求目标页面）<br>cheerio（cheerio相当于node版的jQuery，用过jQuery的同学会非常容易上手。它主要是用来获取抓取到的页面元素和其中的数据信息）</p>
+<h1 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h1><p>新建一个baidunews文件夹，目录下新建index.js文件。<br>进行初始化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure></p>
+<p>安装依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install superagent</span><br><span class="line">npm install cheerio</span><br></pre></td></tr></table></figure></p>
+<p>让服务器跑起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&apos;http&apos;); //加载依赖</span><br><span class="line">var port = 8000; //设置端口号</span><br><span class="line"></span><br><span class="line">var server = http.createServer(function(request,response)&#123;</span><br><span class="line">    response.writeHead(200,&#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos;</span><br><span class="line">    &#125;);//返回标题头</span><br><span class="line">    response.write(&apos;Hello World&apos;);//页面输出内容</span><br><span class="line">    response.end();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(port); //设置监听端口</span><br><span class="line">console.log(&apos;Server running on port 8000&apos;);</span><br></pre></td></tr></table></figure>
+<p>访问<a href="http://localhost:8000，页面上显示&quot;Hello" target="_blank" rel="noopener">http://localhost:8000，页面上显示&quot;Hello</a> World”说明服务器成功启动了。</p>
+<h1 id="分析百度新闻首页页面信息"><a href="#分析百度新闻首页页面信息" class="headerlink" title="分析百度新闻首页页面信息"></a>分析百度新闻首页页面信息</h1><p>!(1.jpg)[1.jpg]</p>
+<p>F12打开Chrome的控制台，审查页面元素，经过查看左侧“热点新闻”信息所在DOM的结构，我们发现所有的“热点新闻”信息（包括新闻标题和新闻页面链接）都在id为<code>#pane-news</code>的<code>&lt;div&gt;</code>下面<code>&lt;ul&gt;</code>下<code>&lt;li&gt;</code>下的<code>&lt;a&gt;</code>标签中。用jQuery的选择器表示为：<code>#pane-news ul li a</code>。</p>
+<p>为了爬取新闻数据，首先我们要用superagent请求目标页面，获取整个新闻首页数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const superagent= require(&apos;superagent&apos;);</span><br><span class="line"></span><br><span class="line">let hotNews = [];                                // 热点新闻</span><br><span class="line">let localNews = [];                              // 本地新闻</span><br><span class="line"></span><br><span class="line">//[description] - 使用superagent.get()方法来访问百度新闻首页</span><br><span class="line">superagent.get(&apos;http://news.baidu.com/&apos;).end((err, res) =&gt; &#123;</span><br><span class="line">  if (err) &#123;</span><br><span class="line">    // 如果访问失败或者出错，会这行这里</span><br><span class="line">    console.log(`热点新闻抓取失败 - $&#123;err&#125;`)</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">   // 访问成功，请求http://news.baidu.com/页面所返回的数据会包含在res</span><br><span class="line">   // 抓取热点新闻数据</span><br><span class="line">   hotNews = getHotNews(res)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>获取页面信息后，我们来定义一个函数<code>getHotNews()</code>来抓取页面内的“热点新闻”数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 引入所需要的第三方包</span><br><span class="line">const cheerio = require(&apos;cheerio&apos;);</span><br><span class="line"></span><br><span class="line">let getHotNews = (res) =&gt; &#123;</span><br><span class="line">  let hotNews = [];</span><br><span class="line">  // 访问成功，请求http://news.baidu.com/页面所返回的数据会包含在res.text中。</span><br><span class="line">  </span><br><span class="line">  /* 使用cheerio模块的cherrio.load()方法，将HTMLdocument作为参数传入函数</span><br><span class="line">     以后就可以使用类似jQuery的$(selectior)的方式来获取页面元素</span><br><span class="line">   */</span><br><span class="line">  let $ = cheerio.load(res.text);</span><br><span class="line"></span><br><span class="line">  // 找到目标数据所在的页面元素，获取数据</span><br><span class="line">  $(&apos;div#pane-news ul li a&apos;).each((idx, ele) =&gt; &#123;</span><br><span class="line">    // cherrio中$(&apos;selector&apos;).each()用来遍历所有匹配到的DOM元素</span><br><span class="line">    // 参数idx是当前遍历的元素的索引，ele就是当前便利的DOM元素</span><br><span class="line">    let news = &#123;</span><br><span class="line">      title: $(ele).text(),        // 获取新闻标题</span><br><span class="line">      href: $(ele).attr(&apos;href&apos;)    // 获取新闻网页链接</span><br><span class="line">    &#125;;</span><br><span class="line">    hotNews.push(news)              // 存入最终结果数组</span><br><span class="line">  &#125;);</span><br><span class="line">  return hotNews</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>superagent模块提供了很多比如get、post、delte等方法，可以很方便地进行Ajax请求操作。在请求结束后执行.end()回调函数。.end()接受一个函数作为参数，该函数又有两个参数error和res。当请求失败，error会包含返回的错误信息，请求成功，error值为null，返回的数据会包含在res参数中。</li>
+<li>cheerio模块的.load()方法，将HTML document作为参数传入函数，以后就可以使用类似jQuery的$(selectior)的方式来获取页面元素。同时可以使用类似于jQuery中的.each()来遍历元素。此外，还有很多方法，大家可以自行Google/Baidu。</li>
+</ol>
+<p>将抓取的数据返回给前端浏览器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var server = http.createServer(function(request,response)&#123;</span><br><span class="line">    response.writeHead(200,&#123;</span><br><span class="line">        &apos;content-type&apos;: &apos;application/json&apos;</span><br><span class="line">    &#125;);//返回标题头</span><br><span class="line">    response.write(JSON.stringify(hotNews));//页面输出内容</span><br><span class="line">    response.end();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>!(2.jpg)[2.jpg]<br>成功获取了热点新闻的信息。</p>
+<p>总结一下步骤</p>
+<ol>
+<li>启动node服务。</li>
+<li>分析页面dom结构，提取要抓取的内容。</li>
+<li>使用<code>superagent</code>请求页面，获取数据。</li>
+<li>使用<code>cheerio</code>获取页面元素，获取目标数据。</li>
+<li>将数据发送到前端网页。</li>
+</ol>
+<p>还可以将数据储存到本地。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> fs.appendFile(&apos;data/result.json&apos;, JSON.stringify(hotNews) ,&apos;utf-8&apos;, function (err) &#123;</span><br><span class="line">      if(err) throw new Error(&quot;appendFile failed...&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
-实现一个数据监听器Observer，能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者。
-实现一个指令解析器Compile，对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数。
-实现一个Watcher，作为连接Observer和Compile的桥梁，能够订阅并收到每个属性变动的通知，执行指令绑定的相应回调函数，从而更新视图。
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/vue的实现（一）/">
-            
-                <span>vue的实现（一）</span>
-        </a>
-        <div class="abstract-content">
-            首先来看一些会遇到的东西
-DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对象。它被作为一个轻量版的 Document 使用，用于存储已排好版的或尚未打理好格式的XML片段。最大的区别是因为 DocumentFragment 不是真实DOM树的一部分，它的变化不会触发 DOM 树的（重新渲染)，且不会导致性能等问题。使用DocumentFragment减少页面重绘次数，提高页面性能。12345&lt;ul id=&quot;fragment_test&quot;&gt;  &lt;li&gt;test&lt;/li&gt;  &lt;li&gt;test&lt...
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://lolimy.club">xza</a>
+            </p><p>原文链接：<a href="https://lolimy.club/2019/03/21/node爬虫爬取百度新闻/">https://lolimy.club/2019/03/21/node爬虫爬取百度新闻/</a>
+            </p><p>发表日期：<a href="https://lolimy.club/2019/03/21/node爬虫爬取百度新闻/">三月 21日 2019, 3:31:44 下午</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/14/生成一个元素所有节点/">
-            
-                <span>生成一个元素所有节点</span>
-        </a>
-        <div class="abstract-content">
-            通过createDocumentFragment创建一个空的dom节点。12345678910111213// 获取节点const node = document.getElementById(&apos;test&apos;)//拷贝到DocumentFragment    function nodeToFragme(node)&#123;            var flag = document.createDocumentFragment();            var child;            while(child = node.firstChild )&#1...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/12/点击复制功能的实现/">
-            
-                <span>点击复制功能的实现</span>
-        </a>
-        <div class="abstract-content">
-            使用原声js实现点击复制点击复制功能核心的代码就是1document.execCommand(&quot;Copy&quot;)
-通过这一句代码来进行复制。12345678910111213&lt;body&gt;&lt;input type=&apos;text&apos; value=&quot;要复制的内容&quot; id=&quot;copyContent&quot;&gt;&lt;button onClick=&quot;copyValue()&quot;&gt;点击复制代码 &lt;/button&gt;&lt;script type=&quot;text/javascri...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/27/防抖与节流/">
-            
-                <span>防抖与节流</span>
-        </a>
-        <div class="abstract-content">
-            防抖：如果你持续触发事件，但是我一定在事件触发 n 秒后才执行，如果你在一个事件触发的 n 秒内又触发了这个事件，那我就以新的事件的时间为准，n 秒后才执行。
-防抖防抖：如果你持续触发事件，但是我一定在事件触发 n 秒后才执行，如果你在一个事件触发的 n 秒内又触发了这个事件，那我就以新的事件的时间为准，n 秒后才执行。12345678910function debounce(fn, delay) &#123;    //定义一个变量，记录触发情况    var timeout;    return function () &#123;        //时间被持续触发时，清除之前的ti...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/26/给jqueryAjax传参/">
-            
-                <span>给$.ajax传参</span>
-        </a>
-        <div class="abstract-content">
-            在做项目的过程中，在ajax()方法中向后台请求成功后，需要在success()方法中调用自定义的参数,可以写成如下方法。将name传入success中。12345678910111213141516var name = &apos;hello&apos;;function getTypeList(name)&#123;　      　$.ajax(           &#123;　url : &apos;/hello&apos;,　　          　　type : &apos;get&apos;,　　　            　contentType : &quot;text/...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jquery">jquery</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/20/WebTorrent/">
-            
-                <span>WebTorrent:一个磁力链接播放器</span>
-        </a>
-        <div class="abstract-content">
-            WebTorrent是一个由js编写的磁力链接播放器,网页版可以直接嵌入网页，相当于一个解析磁力链接的在线播放器，在项目官网首页就可以体验。体验网页版WebTorrent：https://webtorrent.io/ github地址为：https://github.com/webtorrent/webtorrent 。桌面版为WebTorrent Desktop，支持Windows/MAC/Linux，不仅可以用来BT下载，还可以边下边播。由于bt的特性，下载速度基本没啥保证，除了官网的例子，就没试出什么能直接观看的种子。
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="播放器">播放器</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/19/基于jquery的图片懒加载/">
-            
-                <span>基于jquery图片懒加载</span>
-        </a>
-        <div class="abstract-content">
-            对img和div的背景图片进行懒加载。在data-original写入真正的链接。html12&lt;div data-original=&quot;example1.jpg&quot;&gt;&lt;/div&gt;&lt;img data-original=&quot;example2.jpg&quot;&gt;
-javascript1234567891011121314151617181920212223242526272829303132333435363738394041424344454647// 注意: 需要引入jQuery    (function() &#123;   ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jquery">jquery</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="懒加载">懒加载</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/03/19/vue的实现（三）/" title="vue的实现（三）">
+                    <div class="prevTitle">vue的实现（三）</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">NEXT &#62;</a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <div id="comment"></div>
+    <script>
+    new Valine({
+        el: '#comment' ,
+        notify:false, 
+        verify:false, 
+        appId: "Pu6DpDCoGEukeqbVsY9Ku2rv-gzGzoHsz",
+        appKey: "TA1oWGCaC2NCj7cBhMwWQCoM",
+        placeholder: "评论",
+        path:window.location.pathname, 
+        avatar:'mm' 
+    });
+    </script>
+
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -742,6 +576,24 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#材料"><span class="toc-number">1.</span> <span class="toc-text">材料</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#爬取网站"><span class="toc-number">1.1.</span> <span class="toc-text">爬取网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖"><span class="toc-number">1.2.</span> <span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动服务器"><span class="toc-number">2.</span> <span class="toc-text">启动服务器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分析百度新闻首页页面信息"><span class="toc-number">3.</span> <span class="toc-text">分析百度新闻首页页面信息</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1386,6 +1238,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"mobile":{"show":false,"scale":0.3},"model":{"jsonPath":"/live2d_models/aoba/aoba.model.json"},"log":false});</script></body>
 </html>
