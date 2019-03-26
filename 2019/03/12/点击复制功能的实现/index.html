@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">785</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">824</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -418,8 +418,9 @@ height:50vh;
     <article class="article-entry">
         <h1 id="使用原声js实现点击复制"><a href="#使用原声js实现点击复制" class="headerlink" title="使用原声js实现点击复制"></a>使用原声js实现点击复制</h1><p>点击复制功能核心的代码就是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.execCommand(&quot;Copy&quot;)</span><br></pre></td></tr></table></figure></p>
 <p>通过这一句代码来进行复制。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=&apos;text&apos; value=&quot;要复制的内容&quot; id=&quot;copyContent&quot;&gt;</span><br><span class="line">&lt;button onClick=&quot;copyValue()&quot;&gt;点击复制代码 &lt;/button&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function copyValue()</span><br><span class="line">&#123;</span><br><span class="line">var temp = document.getElementById(&quot;copyContent&quot;);</span><br><span class="line">temp.select(); // 选中要复制的内容</span><br><span class="line">document.execCommand(&quot;Copy&quot;); // 核心代码，复制选中的内容到剪切板</span><br><span class="line">alert(&quot;复制成功&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
-<p><img src="1.png" alt="图片1"><br>如果不想让用户看见input等文字输入框，动态设置要复制的值，可以动态创建一个input，将内容设置在内，通过css将其隐藏起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">input&#123;</span><br><span class="line">    position:fixed;</span><br><span class="line">    left:-1000px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=&apos;text&apos; value=&quot;要复制的内容&quot; id=&quot;copyContent&quot;&gt;</span><br><span class="line">&lt;button onClick=&quot;copyValue()&quot;&gt;点击复制代码 &lt;/button&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function copyValue()</span><br><span class="line">&#123;</span><br><span class="line">var temp = document.getElementById(&quot;copyContent&quot;);</span><br><span class="line">temp.select(); // 选中要复制的内容</span><br><span class="line">document.execCommand(&quot;Copy&quot;); // 核心代码，复制选中的内容到剪切板</span><br><span class="line">alert(&quot;复制成功&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="1.png" alt="图片1"><br>如果不想让用户看见input等文字输入框，动态设置要复制的值，可以动态创建一个input，将内容设置在内，通过css将其隐藏起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">input&#123;</span><br><span class="line">    position:fixed;</span><br><span class="line">    left:-1000px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=&apos;text&apos; readonly value=&quot;要复制的内容&quot; id=&quot;copyContent&quot;&gt;</span><br><span class="line">&lt;button onClick=&quot;copyValue()&quot;&gt;点击复制代码 &lt;/button&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">function copyValue()</span><br><span class="line">&#123;</span><br><span class="line">var temp = document.getElementById(&quot;copyContent&quot;);</span><br><span class="line">temp.select(); // 选中要复制的内容</span><br><span class="line">document.execCommand(&quot;Copy&quot;); // 核心代码，复制选中的内容到剪切板</span><br><span class="line">alert(&quot;复制成功&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
 <p>现代浏览器都可以使用此方法来进行复制。<br>由于兼容性和一些方法扩展等原因，可以使用一些现成的js库。</p>
+<h2 id="移动端优化"><a href="#移动端优化" class="headerlink" title="移动端优化"></a>移动端优化</h2><p>由于移动端上聚焦到文本框时会自动弹出键盘，因此需要加上readonly防止键盘弹出。</p>
 <h1 id="clipboard-js"><a href="#clipboard-js" class="headerlink" title="clipboard.js"></a>clipboard.js</h1><p>网上比较方便的插件有clipboard.js,不包含flash，体积小。地址：<a href="https://github.com/zenorocha/clipboard.js" target="_blank" rel="noopener">https://github.com/zenorocha/clipboard.js</a> 。用到的方法本质也是document.execCommand(“Copy”)。<br>使用方法为npm安装和直接<code>script</code>标签引用。<br>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new ClipboardJS(&apos;.btn&apos;);</span><br></pre></td></tr></table></figure></p>
 <p>来初始化代码，需要传入DOM 选择器, HTML 元素, 或者 HTML 元素数组作为参数，来实例化对象。</p>
 <h2 id="从另一个元素复制"><a href="#从另一个元素复制" class="headerlink" title="从另一个元素复制"></a>从另一个元素复制</h2><p>你可以给目标元素添加一个 data-clipboard-target 属性来实现这个功能。<br>这个属性的值就是能匹配到另一个元素的选择器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Target --&gt;</span><br><span class="line">&lt;input id=&quot;foo&quot; value=&quot;https://github.com/zenorocha/clipboard.js.git&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Trigger --&gt;</span><br><span class="line">&lt;button class=&quot;btn&quot; data-clipboard-target=&quot;#foo&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;assets/clippy.svg&quot; alt=&quot;Copy to clipboard&quot;&gt;</span><br><span class="line">&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
@@ -579,7 +580,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用原声js实现点击复制"><span class="toc-number">1.</span> <span class="toc-text">使用原声js实现点击复制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#clipboard-js"><span class="toc-number">2.</span> <span class="toc-text">clipboard.js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#从另一个元素复制"><span class="toc-number">2.1.</span> <span class="toc-text">从另一个元素复制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从元素本身属性复制"><span class="toc-number">2.2.</span> <span class="toc-text">从元素本身属性复制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义事件"><span class="toc-number">2.3.</span> <span class="toc-text">自定义事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态设置目标元素"><span class="toc-number">2.4.</span> <span class="toc-text">动态设置目标元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态设置文本内容"><span class="toc-number">2.5.</span> <span class="toc-text">动态设置文本内容</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用原声js实现点击复制"><span class="toc-number">1.</span> <span class="toc-text">使用原声js实现点击复制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端优化"><span class="toc-number">1.1.</span> <span class="toc-text">移动端优化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#clipboard-js"><span class="toc-number">2.</span> <span class="toc-text">clipboard.js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#从另一个元素复制"><span class="toc-number">2.1.</span> <span class="toc-text">从另一个元素复制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从元素本身属性复制"><span class="toc-number">2.2.</span> <span class="toc-text">从元素本身属性复制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义事件"><span class="toc-number">2.3.</span> <span class="toc-text">自定义事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态设置目标元素"><span class="toc-number">2.4.</span> <span class="toc-text">动态设置目标元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态设置文本内容"><span class="toc-number">2.5.</span> <span class="toc-text">动态设置文本内容</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -957,9 +958,10 @@ top:50vh;
     
     
     
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 27
+        Total : 28
         </div>
         <!-- search  -->
         
@@ -972,6 +974,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/26</span><a class="archive-post-title" href="/2019/03/26/无限循环的debugger/">无限循环的debugger</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1122,11 +1129,11 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
+    
         <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
     
         <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
-    
-        <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
     
         <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
@@ -1136,23 +1143,23 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
     
-        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
-    
-        <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
+    
+        <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
     
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
     
         <span class="sidebar-tag-name" data-tags="懒加载"><span class="iconfont-archer">&#xe606;</span>懒加载</span>
     
-        <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
-    
         <span class="sidebar-tag-name" data-tags="javascript"><span class="iconfont-archer">&#xe606;</span>javascript</span>
     
         <span class="sidebar-tag-name" data-tags="array"><span class="iconfont-archer">&#xe606;</span>array</span>
+    
+        <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1187,9 +1194,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="一些坑"><span class="iconfont-archer">&#xe60a;</span>一些坑</span>
-    
         <span class="sidebar-category-name" data-categories="搭社团网页遇到的问题"><span class="iconfont-archer">&#xe60a;</span>搭社团网页遇到的问题</span>
+    
+        <span class="sidebar-category-name" data-categories="一些坑"><span class="iconfont-archer">&#xe60a;</span>一些坑</span>
     
         <span class="sidebar-category-name" data-categories="前端"><span class="iconfont-archer">&#xe60a;</span>前端</span>
     
