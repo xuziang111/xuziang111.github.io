@@ -273,7 +273,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">306</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">439</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -427,6 +427,8 @@ height:50vh;
 <p>Deactivate breakpoint忽略断点。<br>但有的时候会遇到其他情况<br>由于忽略了所有断点，连你自己设置的都不放过（你的断点没有意义了），会继续去执行debugger，创建对象，你的cpu会被跑满。<br>也可以选择never pasue here<br><img src="2.png" alt="2.png"></p>
 <p>但有的时候还是不管用<br><img src="4.gif" alt="4.gif"></p>
 <p>最好的方法还是找到函数，修改js，抓包后替换网站的js文件。<br>查看call Stack查找产生debugger的函数进行修改。一般产生这种无限debugger的都是使用setInterval()函数，找到并注释掉。<br>修改完成后利用charles（抓包工具）重定向到修改完成后的文件，就可以解决了。</p>
+<h1 id="一个无限debugger的代码"><a href="#一个无限debugger的代码" class="headerlink" title="一个无限debugger的代码"></a>一个无限debugger的代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">var ConsoleManager=&#123;</span><br><span class="line">    init()&#123;</span><br><span class="line">        var self = this;</span><br><span class="line">        var x = document.createElement(&apos;div&apos;);</span><br><span class="line">        var isOpening = false,isOpened=false;</span><br><span class="line">        Object.defineProperty(x, &apos;id&apos;, &#123;</span><br><span class="line">            get()&#123;</span><br><span class="line">                if(!isOpening)&#123;</span><br><span class="line">                    isOpening=true;</span><br><span class="line">                &#125;</span><br><span class="line">                isOpened=true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        setInterval(function()&#123;</span><br><span class="line">            isOpened=false;</span><br><span class="line">            console.info(x);</span><br><span class="line">            console.clear();</span><br><span class="line">			            console.log(isOpening)</span><br><span class="line">			if(isOpening)&#123;</span><br><span class="line">			let xxx = `!(function()&#123;</span><br><span class="line">				debugger</span><br><span class="line">				eval(xxx)</span><br><span class="line">			&#125;)()`</span><br><span class="line">			eval(xxx)</span><br><span class="line">			console.log(&apos;x&apos;)</span><br><span class="line">			&#125;</span><br><span class="line">            if(!isOpened &amp;&amp; isOpening)&#123;</span><br><span class="line">                isOpening=false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,0)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ConsoleManager.init();</span><br></pre></td></tr></table></figure>
+<p>由于console.log()输出内容是实时的，每次打开控制台时的console.log()都会去运行一遍get，因此会让程序进入debugger。</p>
 
     </article>
     <!-- license  -->
@@ -434,7 +436,7 @@ height:50vh;
         <div class="license-wrapper">
             <p>原文作者：<a href="https://lolimy.club">xza</a>
             </p><p>原文链接：<a href="https://lolimy.club/2019/03/26/无限循环的debugger/">https://lolimy.club/2019/03/26/无限循环的debugger/</a>
-            </p><p>发表日期：<a href="https://lolimy.club/2019/03/26/无限循环的debugger/">三月 26日 2019, 10:41:22 上午</a>
+            </p><p>发表日期：<a href="https://lolimy.club/2019/03/26/无限循环的debugger/">March 26th 2019, 10:41:22 am</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -575,7 +577,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一个无限debugger的代码"><span class="toc-number">1.</span> <span class="toc-text">一个无限debugger的代码</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -588,6 +590,12 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1130,21 +1138,21 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
     
-        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
+        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
     
         <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
     
-        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
+        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
         <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
-    
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
-    
-        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
         <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
     
         <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
+    
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
     
