@@ -361,6 +361,75 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/04/03/实体编码/">
+            
+                <span>实体编码</span>
+        </a>
+        <div class="abstract-content">
+            在 Node 层利用 cheerio 解析网页时，输出的中文内容都是以 &amp;#x开头的字符，通过浏览器打开可以正常显示。123const cheerio = require(‘cheerio‘);const $ = cheerio.load(‘&lt;div id=&quot;content&quot;&gt;你好&lt;/div&gt;‘)console.log($(‘#content‘).html()) //&amp;#x4F60;&amp;#x597D;
+这叫做实体编码 entity code。
+在 HTML 中，某些字符是预留的，例如小于号&lt;、大于号&gt;等，浏览器...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/03</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="爬虫">爬虫</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="编码">编码</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="nodejs">nodejs</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/02/mysql安装与使用/">
+            
+                <span>mysql安装与使用</span>
+        </a>
+        <div class="abstract-content">
+            win上安装mysql下载地址 https://dev.mysql.com/downloads/mysql/
+下载完后，我们将 zip 包解压到相应的目录，这里我将解压后的文件夹放在 C:\web\mysql-8.0.11 下。
+接下来我们需要配置下 MySQL 的配置文件
+打开刚刚解压的文件夹 C:\web\mysql-8.0.11 ，在该文件夹下创建 my.ini 配置文件，编辑 my.ini 配置以下基本信息：1234567891011121314151617[mysql]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="mysql">mysql</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="爬虫">爬虫</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/21/node爬虫爬取百度新闻/">
             
                 <span>node爬虫爬取百度新闻</span>
@@ -382,9 +451,9 @@
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="node">node</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="爬虫">爬虫</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="node">node</a>
     
 </div>
             
@@ -879,9 +948,45 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 30
+        Total : 32
         </div>
         <!-- search  -->
         
@@ -894,6 +999,16 @@
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span><a class="archive-post-title" href="/2019/04/03/实体编码/">实体编码</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span><a class="archive-post-title" href="/2019/04/02/navicat12链接mysql8-15/">navicat12链接mysql8.15</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1061,29 +1176,35 @@
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
     
+        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
+    
         <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
     
         <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
     
         <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
-        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
-    
         <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
-    
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
     
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
+        <span class="sidebar-tag-name" data-tags="navicat"><span class="iconfont-archer">&#xe606;</span>navicat</span>
     
         <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
     
         <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
+        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
+    
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
+    
+        <span class="sidebar-tag-name" data-tags="编码"><span class="iconfont-archer">&#xe606;</span>编码</span>
+    
+        <span class="sidebar-tag-name" data-tags="nodejs"><span class="iconfont-archer">&#xe606;</span>nodejs</span>
     
         <span class="sidebar-tag-name" data-tags="懒加载"><span class="iconfont-archer">&#xe606;</span>懒加载</span>
     
