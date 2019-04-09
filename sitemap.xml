@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lolimy.club/2019/03/26/JavaScript%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB/</loc>
+    
+    <lastmod>2019-04-09T09:01:49.619Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lolimy.club/2019/04/03/%E5%AE%9E%E4%BD%93%E7%BC%96%E7%A0%81/</loc>
     
     <lastmod>2019-04-03T08:09:36.550Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://lolimy.club/2019/04/02/mysql%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-04-02T06:43:27.220Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lolimy.club/2019/03/26/xss%E6%94%BB%E5%87%BB/</loc>
-    
-    <lastmod>2019-03-26T07:57:43.504Z</lastmod>
     
   </url>
   
