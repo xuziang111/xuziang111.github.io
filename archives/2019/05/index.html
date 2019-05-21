@@ -23,7 +23,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>typescript类型 · xuziang&#39;s Blog</title>
+    <title>xuziang&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -204,23 +204,12 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">xuziang&#39;s Blog.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">typescript类型</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">xuziang's Blog.</a>
 </header>
@@ -232,74 +221,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            typescript类型
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="typescript">typescript</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">891</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/12/17</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -414,83 +353,40 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <p>布尔、字符串、数字、数组、对象<br>在原生数组的基础上</p>
-<p>##元组 Tuple<br>元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。 比如，你可以定义一对值分别为<code>string</code>和<code>number</code>类型的元组。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Declare a tuple type</span><br><span class="line">let x: [string, number];</span><br><span class="line">// Initialize it</span><br><span class="line">x = [&apos;hello&apos;, 10]; // OK</span><br><span class="line">// Initialize it incorrectly</span><br><span class="line">x = [10, &apos;hello&apos;]; // Error`&lt;/pre&gt;</span><br></pre></td></tr></table></figure></p>
-<p>当访问一个已知索引的元素，会得到正确的类型：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(x[0].substr(1)); // OK</span><br><span class="line">console.log(x[1].substr(1)); // Error, &apos;number&apos; does not have &apos;substr&apos;</span><br></pre></td></tr></table></figure></p>
-<p>当访问一个越界的元素，会使用联合类型替代：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x[3] = &apos;world&apos;; // OK, 字符串可以赋值给(string | number)类型</span><br><span class="line">console.log(x[5].toString()); // OK, &apos;string&apos; 和 &apos;number&apos; 都有 toString</span><br><span class="line">x[6] = true; // Error, 布尔不是(string | number)类型</span><br></pre></td></tr></table></figure></p>
-<p>##枚举<br>num类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，使用枚举类型可以为一组数值赋予友好的名字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;Red, Green, Blue&#125;</span><br><span class="line">let c: Color = Color.Green;</span><br></pre></td></tr></table></figure></p>
-<p>编译出来为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var Color;</span><br><span class="line">(function (Color) &#123;</span><br><span class="line">    Color[Color[&quot;Red&quot;] = 0] = &quot;Red&quot;;</span><br><span class="line">    Color[Color[&quot;Green&quot;] = 1] = &quot;Green&quot;;</span><br><span class="line">    Color[Color[&quot;Blue&quot;] = 2] = &quot;Blue&quot;;</span><br><span class="line">&#125;)(Color || (Color = &#123;&#125;));</span><br><span class="line">var c = Color.Green;</span><br></pre></td></tr></table></figure></p>
-<p>默认从0开始，也可以手动指定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;Red = 1, Green, Blue&#125;</span><br><span class="line">let c: Color = Color.Green; //1</span><br><span class="line">//编译出来如下</span><br><span class="line">var Color;</span><br><span class="line">(function (Color) &#123;</span><br><span class="line">    Color[Color[&quot;Red&quot;] = 1] = &quot;Red&quot;;</span><br><span class="line">    Color[Color[&quot;Green&quot;] = 2] = &quot;Green&quot;;</span><br><span class="line">    Color[Color[&quot;Blue&quot;] = 3] = &quot;Blue&quot;;</span><br><span class="line">&#125;)(Color || (Color = &#123;&#125;));</span><br><span class="line">var c = Color.Green; //2</span><br><span class="line"></span><br><span class="line">console.log(Color)//&#123;1: &quot;Red&quot;, 2: &quot;Green&quot;, 3: &quot;Blue&quot;, Red: 1, Green: 2, Blue: 3&#125;</span><br></pre></td></tr></table></figure></p>
-<p>也可以全部手动赋值</p>
-<p>##Any<br>有时候，我们会想要为那些在编程阶段还不清楚类型的变量指定一个类型。 这些值可能来自于动态的内容，比如来自用户输入或第三方代码库。 这种情况下，我们不希望类型检查器对这些值进行检查而是直接让它们通过编译阶段的检查。 那么我们可以使用 any类型来标记这些变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let notSure: any = 4;</span><br><span class="line">notSure = &quot;maybe a string instead&quot;;</span><br><span class="line">notSure = false; // okay, definitely a boolean</span><br></pre></td></tr></table></figure></p>
-<p>##Void<br>某种程度上来说，<code>void</code>类型像是与<code>any</code>类型相反，它表示没有任何类型。 当一个<strong>函数没有返回值时</strong>，你通常会见到其返回值类型是 <code>void</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function warnUser(): void &#123;</span><br><span class="line">    console.log(&quot;This is my warning message&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>声明一个<code>void</code>类型的变量没有什么大用，因为你只能为它赋予<code>undefined</code>和<code>null</code>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let unusable: void = undefined;</span><br></pre></td></tr></table></figure></p>
-<p>##Never<br>never类型表示的是那些永不存在的值的类型。 例如， never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型； 变量也可能是 never类型，当它们被永不为真的类型保护所约束时。</p>
-<p>never类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是never的子类型或可以赋值给never类型（除了never本身之外）。 即使 any也不可以赋值给never。</p>
-<p>下面是一些返回never类型的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 返回never的函数必须存在无法达到的终点</span><br><span class="line">function error(message: string): never &#123;</span><br><span class="line">    throw new Error(message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 推断的返回值类型为never</span><br><span class="line">function fail() &#123;</span><br><span class="line">    return error(&quot;Something failed&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 返回never的函数必须存在无法达到的终点</span><br><span class="line">function infiniteLoop(): never &#123;</span><br><span class="line">    while (true) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>参考链接<br><a href="https://www.tslang.cn/docs/handbook/basic-types.html" target="_blank" rel="noopener">typescript官方文档</a></p>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>原文作者：<a href="https://lolimy.club">xza</a>
-            </p><p>原文链接：<a href="https://lolimy.club/2018/12/17/typescript类型/">https://lolimy.club/2018/12/17/typescript类型/</a>
-            </p><p>发表日期：<a href="https://lolimy.club/2018/12/17/typescript类型/">十二月 17日 2018, 9:33:27 晚上</a>
-            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/05/21/vue-router中的导航守卫的坑/">
+            
+                <span>vue-router中的导航守卫的坑</span>
+        </a>
+        <div class="abstract-content">
+            在最后一定要调用next()否则路由不会变化。
+
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/12/17/BEM/" title="BEM命名">
-                    <div class="nextTitle">BEM命名</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/11/26/拖拽效果/" title="拖拽效果">
-                    <div class="prevTitle">拖拽效果</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
-    
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-    <div id="comment"></div>
-    <script>
-    new Valine({
-        el: '#comment' ,
-        notify:false, 
-        verify:false, 
-        appId: "Pu6DpDCoGEukeqbVsY9Ku2rv-gzGzoHsz",
-        appKey: "TA1oWGCaC2NCj7cBhMwWQCoM",
-        placeholder: "评论",
-        path:window.location.pathname, 
-        avatar:'mm' 
-    });
-    </script>
-
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -568,24 +464,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1382,8 +1260,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"mobile":{"show":false,"scale":0.3},"model":{"jsonPath":"/live2d_models/aoba/aoba.model.json"},"log":false});</script></body>
 </html>
