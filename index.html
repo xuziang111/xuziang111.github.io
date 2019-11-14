@@ -20,7 +20,7 @@
     
     <meta name="keywords" content="前端,javascript,CSS">
     
-    <meta name="description" content="">
+    <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>xuziang&#39;s Blog</title>
@@ -190,8 +190,8 @@
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script">
     <link rel="preload" href="/scripts/main.js" as="script">
-    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin="">
-    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin="">
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
     
     <!-- fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
@@ -365,6 +365,29 @@ height:50vh;
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
             <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/11/14/获取查询参数/">
+            
+                <span>获取查询参数</span>
+        </a>
+        <div class="abstract-content">
+            123456789101112131415161718192021222324function getQueryArgs()&#123;    var qs = (location.search.length &gt; 0 ? location.search.substr(1) : &apos;&apos;),        //保存每一项        args = &#123;&#125;,        //得到每一项        items = qs.length ? qs.split(&apos;&amp;&apos;) : [],        item = null,  ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/14</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
     
     
     
@@ -653,34 +676,6 @@ Deactivate breakpoint忽略断点。但有的时候会遇到其他情况由于�
         <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
     
 </div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/03/18/vue的实现（二）/">
-            
-                <span>vue的实现（二）</span>
-        </a>
-        <div class="abstract-content">
-            vue是通过数据劫持的方式来做数据绑定的，其中最核心的方法便是通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的。整理了一下，要实现mvvm的双向绑定，就必须要实现以下几点：
-
-实现一个数据监听器Observer，能够对数据对象的所有属性进行监听，如有变动可拿到最新值并通知订阅者。
-实现一个指令解析器Compile，对每个元素节点的指令进行扫描和解析，根据指令模板替换数据，以及绑定相应的更新函数。
-实现一个Watcher，作为连接Observer和Compile的桥梁，能够订阅并收到每个属性变动的通知，执行指令绑定的相应回调函数，从而更新视图。
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/18</span>
-            </div>
-            <!-- tags  -->
             
         </div>
     </article>
@@ -1333,9 +1328,20 @@ Deactivate breakpoint忽略断点。但有的时候会遇到其他情况由于�
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 34
+        Total : 35
         </div>
         <!-- search  -->
         
@@ -1348,6 +1354,11 @@ Deactivate breakpoint忽略断点。但有的时候会遇到其他情况由于�
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/14</span><a class="archive-post-title" href="/2019/11/14/获取查询参数/">获取查询参数</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1535,17 +1546,19 @@ Deactivate breakpoint忽略断点。但有的时候会遇到其他情况由于�
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
     
-        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+        <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
     
         <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
     
-        <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
+        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
     
         <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
-        <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
-    
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+    
+        <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
@@ -1556,8 +1569,6 @@ Deactivate breakpoint忽略断点。但有的时候会遇到其他情况由于�
         <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
         <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
-    
-        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
     
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
     
