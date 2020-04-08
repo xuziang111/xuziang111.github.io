@@ -372,6 +372,81 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/03/26/无限循环的debugger/">
+            
+                <span>无限循环的debugger</span>
+        </a>
+        <div class="abstract-content">
+            一些网站，打开开发者工具可能会遇到无限循环的debugger，例如 https://m.ly.com/flightnew/SHA_PEK.html?flyofftime=2017-12-05&amp;showwxpaytitle=1&amp;refid=10758821。这种debugger主要为了
+
+不停地打断你，浪费时间
+防止调试
+不断的产生不可回收的对象，占据你的内存，造成内存泄漏，没过多久浏览器就会卡顿,甚至可以跑满你的cpu，调试你是不用想了，能关掉页面就已经不错了
+
+此时可以选择
+
+Deactivate breakpoint忽略断点。但有的时候会遇到其他情况由于忽略了所有断点...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/26</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="javascript">javascript</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="调试">调试</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/03/21/node爬虫爬取百度新闻/">
+            
+                <span>node爬虫爬取百度新闻</span>
+        </a>
+        <div class="abstract-content">
+            材料爬取网站 http://news.baidu.com/
+依赖superagent是node里一个非常方便的、轻量的、渐进式的第三方客户端请求代理模块，用他来请求目标页面）cheerio（cheerio相当于node版的jQuery，用过jQuery的同学会非常容易上手。它主要是用来获取抓取到的页面元素和其中的数据信息）
+启动服务器新建一个baidunews文件夹，目录下新建index.js文件。进行初始化。1npm init
+安装依赖12npm install superagentnpm install cheerio
+让服务器跑起来。
+12345678910111213var ht...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="爬虫">爬虫</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="node">node</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/03/19/vue的实现（三）/">
             
                 <span>vue的实现（三）</span>
@@ -596,68 +671,6 @@ DocumentFragmentMDN上解释为表示一个没有父级文件的最小文档对�
             <div class="abstract-tags">
     
         <a class="post-tag" href="javascript:void(0);" data-tags="播放器">播放器</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/19/基于jquery的图片懒加载/">
-            
-                <span>基于jquery图片懒加载</span>
-        </a>
-        <div class="abstract-content">
-            对img和div的背景图片进行懒加载。在data-original写入真正的链接。html12&lt;div data-original=&quot;example1.jpg&quot;&gt;&lt;/div&gt;&lt;img data-original=&quot;example2.jpg&quot;&gt;
-javascript1234567891011121314151617181920212223242526272829303132333435363738394041424344454647// 注意: 需要引入jQuery    (function() &#123;   ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jquery">jquery</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="懒加载">懒加载</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/02/19/jquery求元素顶部到窗口底部的距离/">
-            
-                <span>jquery求元素顶部到窗口底部的距离</span>
-        </a>
-        <div class="abstract-content">
-            可以用来做图片等懒加载的判断1$(window).height()-($(&quot;元素&quot;).offset().top-$(document).scrollTop())
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="jquery">jquery</a>
     
 </div>
             
@@ -1346,9 +1359,69 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 36
+        Total : 38
         </div>
         <!-- search  -->
         
@@ -1358,6 +1431,25 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
     
     
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/08</span><a class="archive-post-title" href="/2020/04/08/dns预解析/">dns预解析</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href="/2020/04/06/vue-cli4设置别名/">vue-cli4设置别名</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
@@ -1558,33 +1650,35 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
     
-        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
-    
         <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
     
         <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
     
-        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
-    
         <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+    
+        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
     
         <span class="sidebar-tag-name" data-tags="jquery"><span class="iconfont-archer">&#xe606;</span>jquery</span>
     
-        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
+        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
-    
         <span class="sidebar-tag-name" data-tags="navicat"><span class="iconfont-archer">&#xe606;</span>navicat</span>
     
-        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
+        <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
         <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
+    
+        <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
+    
+        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
     
         <span class="sidebar-tag-name" data-tags="typescript"><span class="iconfont-archer">&#xe606;</span>typescript</span>
     
         <span class="sidebar-tag-name" data-tags="懒加载"><span class="iconfont-archer">&#xe606;</span>懒加载</span>
+    
+        <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
     
         <span class="sidebar-tag-name" data-tags="编码"><span class="iconfont-archer">&#xe606;</span>编码</span>
     
@@ -1593,8 +1687,6 @@ javascript1234567891011121314151617181920212223242526272829303132333435363738394
         <span class="sidebar-tag-name" data-tags="javascript"><span class="iconfont-archer">&#xe606;</span>javascript</span>
     
         <span class="sidebar-tag-name" data-tags="array"><span class="iconfont-archer">&#xe606;</span>array</span>
-    
-        <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
     
         <span class="sidebar-tag-name" data-tags="调试"><span class="iconfont-archer">&#xe606;</span>调试</span>
     
