@@ -361,6 +361,72 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2020/04/13/v-cloak隐藏vue未编译时标签/">
+            
+                <span>v-cloak隐藏vue未编译时标签</span>
+        </a>
+        <div class="abstract-content">
+            v-cloak当网络较慢，网页还在加载 Vue.js ，而导致 Vue 来不及渲染，这时页面就会显示出 Vue 源代码。我们可以使用 v-cloak 指令来解决这一问题。
+用法：
+这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
+示例：123456[v-cloak] &#123;  display: none;&#125;&lt;div v-cloak&gt;  &#123;&#123; message &#125;&#125;&lt;/div...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/13</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2020/04/09/vue中data初始值/">
+            
+                <span>vue中data初始值</span>
+        </a>
+        <div class="abstract-content">
+            一般将对象、数组等初始值赋值为null，原因是
+
+通过接口异步获取数据，值为null时为loading状态
+获取回来的数据。1) 有数据 渲染数据。2) 数据为空 此时值为空的对象、数组。如果初始为空数组、对象不方便区分状态
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/09</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/05/21/vue-router中的导航守卫的坑/">
             
                 <span>vue-router中的导航守卫的坑</span>
@@ -566,9 +632,9 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
     
 </div>
             
@@ -598,42 +664,9 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
             
             <div class="abstract-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
     
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2018/10/30/vue中给标签属性绑定值/">
-            
-                <span>vue中给标签属性绑定值</span>
-        </a>
-        <div class="abstract-content">
-            给属性绑定值时并非1&lt;img src=&quot;&#123;&#123;e.head&#125;&#125;&quot;&gt;
-而是1&lt;img :src=&quot;bList.head&quot;&gt;
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="一些坑">一些坑</a>
     
 </div>
             
@@ -641,6 +674,10 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
     </article>
     
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/tags/vue/page/2/">2</a><a class="extend next" rel="next" href="/tags/vue/page/2/">NEXT &#62;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -1289,9 +1326,38 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 39
+        Total : 40
         </div>
         <!-- search  -->
         
@@ -1304,6 +1370,11 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/13</span><a class="archive-post-title" href="/2020/04/13/v-cloak隐藏vue未编译时标签/">v-cloak隐藏vue未编译时标签</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1525,15 +1596,15 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
     
-        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
-    
-        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
-    
         <span class="sidebar-tag-name" data-tags="IE"><span class="iconfont-archer">&#xe606;</span>IE</span>
     
         <span class="sidebar-tag-name" data-tags="一些坑"><span class="iconfont-archer">&#xe606;</span>一些坑</span>
     
+        <span class="sidebar-tag-name" data-tags="vue"><span class="iconfont-archer">&#xe606;</span>vue</span>
+    
         <span class="sidebar-tag-name" data-tags="cropperjs"><span class="iconfont-archer">&#xe606;</span>cropperjs</span>
+    
+        <span class="sidebar-tag-name" data-tags="播放器"><span class="iconfont-archer">&#xe606;</span>播放器</span>
     
         <span class="sidebar-tag-name" data-tags="hexo"><span class="iconfont-archer">&#xe606;</span>hexo</span>
     
@@ -1543,9 +1614,9 @@ HTML5 历史模式或 hash 模式，在 IE9 中自动降级
     
         <span class="sidebar-tag-name" data-tags="爬虫"><span class="iconfont-archer">&#xe606;</span>爬虫</span>
     
-        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
-    
         <span class="sidebar-tag-name" data-tags="navicat"><span class="iconfont-archer">&#xe606;</span>navicat</span>
+    
+        <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
     
         <span class="sidebar-tag-name" data-tags="npm"><span class="iconfont-archer">&#xe606;</span>npm</span>
     
